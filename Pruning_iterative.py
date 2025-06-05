@@ -73,7 +73,7 @@ if __name__ == '__main__':
     # Finalize pruning
     remove_masks(model)
     torch.save(model.state_dict(), "alexnet_pruned.pth")
-    def compute_sparsity(tensor):
-        return 100. * float(torch.sum(tensor == 0)) / tensor.numel()
-
-    print(f"Sparsity: {compute_sparsity(model.fc.weight):.2f}%")
+    # def compute_sparsity(tensor):
+    #     return 100. * float(torch.sum(tensor == 0)) / tensor.numel()
+    #
+    # print(f"Sparsity: {compute_sparsity(model.fc.weight):.2f}%")
